@@ -1,20 +1,16 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 
 const TopicSchema = mongoose.Schema({
-  name: {
+  prompt: {
     type: String,
-    required: [true, "Name is required."]
+    required: [true, "Prompt is required."]
+  },
+  judgement: {
+    type: String,
+    required: [true, "Judgement is required."]
   },
 });
 
-TopicSchema.set("toJSON", {
-  transform: (doc, ret, opt) => {
-    delete ret["password"];
-    return ret
-  }
-})
+const Topics = mongoose.model("Topics", TopicSchema);
 
-const Topic = mongoose.model("Topic", TopicSchema);
-
-module.exports = Topic;
+module.exports = Topics;

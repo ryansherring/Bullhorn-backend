@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 
 const UserSchema = mongoose.Schema({
   name: {
@@ -15,10 +14,16 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  speeches: [
+  Groups: [
     {
       type: Schema.Types.ObjectId,
-      ref: "speeches"
+      ref: "Groups"
+    }
+  ],
+  Games: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Games"
     }
   ],
 });

@@ -3,6 +3,7 @@ module.exports = {
     User: require('./User'),
     Games: require('./Games'),
     Groups: require('./Groups'),
-    Topics: require('./Topics')
+    Topics: require('./Topics'),
+    Speakers: require('./Speakers')
   };
   

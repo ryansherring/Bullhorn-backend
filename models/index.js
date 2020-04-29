@@ -14,6 +14,8 @@ mongoose
 
 module.exports = {
   User: require("./User"),
-  speeches: require("./speeches"),
-  Topic: require("./Topic")
+  Games: require("./Games"),
+  Topics: require("./Topics"),
+  Groups: require("./Groups"),
+  Speakers: require("./Speakers")
 };
